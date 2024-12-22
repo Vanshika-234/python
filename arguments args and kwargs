@@ -1,0 +1,58 @@
+Variable-length arguments
+In Python, we can pass a variable number of arguments to a function using special symbols. There are two special symbols:
+
+1. *args (Non-Keyword Arguments)
+2. **kwargs (Keyword Arguments)
+
+Example 1: Variable length non-keywords argument
+
+
+
+1
+# Python program to illustrate
+2
+# *args for variable number of arguments
+3
+def myFun(*argv):
+4
+    for arg in argv:
+5
+        print(arg)
+6
+​
+7
+​
+8
+myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks')
+
+Output
+Hello
+Welcome
+to
+GeeksforGeeks
+
+Example 2: Variable length keyword arguments
+
+
+
+1
+# Python program to illustrate
+2
+# *kwargs for variable number of keyword arguments
+3
+def myFun(**kwargs):
+4
+    for key, value in kwargs.items():
+5
+        print("%s == %s" % (key, value))
+6
+​
+7
+# Driver code
+8
+myFun(first='Geeks', mid='for', last='Geeks')
+
+Output
+first == Geeks
+mid == for
+last == Geeks
